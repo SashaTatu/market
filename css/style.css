@@ -1,4 +1,7 @@
 body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     font-family: sans-serif;
     background-color: #f1f1f1;
     display: flex;
@@ -7,23 +10,23 @@ body{
 }
 
 content{
-    width: 420px;
+    width: 460px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 }
 
-div {
-    border: 1px solid darkgray;
-}
+
 
 .title {
     background: rgb(253, 48, 48);
     width: auto;
     color: white;
     padding: 10px;
+    margin-top: 20px;
     border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     text-transform: uppercase;
     font-size: 20px;
@@ -35,18 +38,96 @@ div {
 .items {
     
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
 }
 
 .item {
-    width: 200px;
-    height: 370px;
+    min-width: 200px;
+    min-height: 400px;
     margin-bottom: 10px;
+    padding: 10px;
+
+    background-color: #ffffff;
 
     border: 1px solid rgb(194, 194, 194);
     border-radius: 5px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.item-title{
+    font-weight: bold;
+}
+
+.item-imge{
+    height: 200px;
+}
+
+.parts-pay {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.parts-pay img {
+    height: 24px;
+}
+
+.price{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+}
+
+.price div:first-child{
+    width: 100px;
+    font-size: 20px;
+}
+
+.price div:first-child span{
+    text-decoration-line: line-through;
+}
+
+.price div:first-child sup {
+    font-size: 12px;
+}
+
+.price div:last-child {
+    font-size: 24px;
+}
+
+.price div:last-child sup {
+    font-size: 14px;
+}
+
+.bonus {
+    background-color: rgb(253, 48, 48);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bonus div:first-child{
+    width: 100px;
+    font-size: 14px;
+}
+
+.bonus div:last-child{
+    font-size: 24px;
+}
+
+.bonus div:last-child sup{
+    font-size: 14px;
 }
 
 .contacts p {
@@ -55,6 +136,7 @@ div {
 
 .contacts p:first-child {
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .contacts p:last-child {
