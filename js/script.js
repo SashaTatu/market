@@ -8,6 +8,7 @@ let itemsDiv = document.getElementById('items')
 
 if (itemsDiv) {
     itemsArray.forEach((item) => {
+        console.log(item)
         itemsDiv.innerHTML += `<div class="item">${item}</div>`
     })
 }else {
