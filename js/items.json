@@ -1,0 +1,43 @@
+[
+    {
+        "id":"1",
+        "title":"Молотокоса 43",
+        "img":"1.png",
+        "parts-pay1":"6",
+        "parts-pay2":"8",
+        "price1":"5499",
+        "price2":"4497",
+        "price-bonus":"4395"
+
+    },
+    {
+        "id":"2",
+        "title":"Електричний тример 110",
+        "img":"2.png",
+        "parts-pay1":"6",
+        "parts-pay2":"8",
+        "price1":"4497",
+        "price2":"3498",
+        "price-bonus":"3396"
+    },
+    {
+        "id":"3",
+        "title":"Електрична газонокосарка 32",
+        "img":"3.png",
+        "parts-pay1":"6",
+        "parts-pay2":"8",
+        "price1":"4497",
+        "price2":"3297",
+        "price-bonus":"3195"
+    },
+    {
+        "id":"2",
+        "title":"Акумуляторний обприскувач 12N",
+        "img":"4.png",
+        "parts-pay1":"6",
+        "parts-pay2":"8",
+        "price1":"2190",
+        "price2":"1698",
+        "price-bonus":"1596"
+    }
+]

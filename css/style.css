@@ -10,7 +10,7 @@ body{
 }
 
 content{
-    width: 460px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,14 +65,16 @@ content{
     font-weight: bold;
 }
 
-.item-imаgе{
+.item-image{
     height: 100px;
     width: 200px;
 }
 
-.img{
-    width: 200px;
+.item-image>img{
+    width: 80%;
 }
+
+
 
 .icon {
     margin-right: 10px;
@@ -100,7 +102,7 @@ content{
     border-radius: 5px;
     padding: 5px 10px;
     display: flex;
-    margin-bottom: 10px;
+
 }
 
 .price div:first-child{

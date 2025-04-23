@@ -1,36 +1,54 @@
 console.log('Script підключено')
 
-let itemsArray = ['Газонокосарка 43','Електричний тример 110','Електрична газонокосарка 32','Акумуляторний оприскувач 12N']
+let itemsArray = []
 
-
-
-let itemsDiv = document.getElementById('items')
-
-if (itemsDiv) {
-    itemsArray.forEach((item) => {
-        console.log(item)
-        itemsDiv.innerHTML += `<div class="item">${item}</div>`
-    })
-}else {
-    console.log('Блок товарів не знайдено')
+async function getObjectsFromFile(file) {
+    try {
+        const response = await fetch(file)
+        if(!response.ok){
+            throw new Error(`HTTP помилка! статус ${response.status}`)
+        }
+        const data = await response.json()
+        return data
+    }
+    catch (error){
+        console.error('Помилка fetching JSON:', error)
+    } finally {
+        console.log('Fetch завершено')
+    } 
 }
 
+async function builItems() {
+    const itemsArray = await getObjectsFromFile('js/items.json')
+    console.log(itemsArray)
 
-            //<div class="item">
-                //<div class="item-title">Мотокоса 43</div>
-                //<div class="item-image">
-                    //<img src="img/1.png" alt="Мотокоса 43">
-                //</div>
-                //<div class="parts-pay">
-                    //<div><img src="" alt="">6</div>
-                    //<div><img src="" alt="">8</div>
-                //</div>
-                //<div class="price">
-                    //<div><span>5449</span><span>грн</span></div>
-                    //<div><span>4497</span><span>грн</span></div>
-                //</div>
-                //<div class="price bonus">
-                    //<div>ціна за купоном</div>
-                    //<div><span>4395</span><span>грн</span></div>
-                //</div>
-            //</div>
+    itemsArray.forEach((item, index) => {
+        console.log(item)
+        let itemsDiv = document.createElement('div')
+        itemsDiv.classList.add('item')
+        itemsDiv.innerHTML += `
+                <div class="item-title">${item.title}</div>
+                <div class="item-image">
+                    <img src="img/${item.img}" alt="${items.title}">
+                </div>
+                <div class="parts-pay">
+                    <div><img src="img/mono-lapka.png" alt="">${item["parts-pay1"]}</div>
+                    <div><img src="img/pb.png" alt="">${item["parts-pay2"]}</div>
+                </div>
+                <div class="price">
+                    <div><span>${item["price1"]}</span><span>грн</span></div>
+                    <div><span>${item["price2"]}</span><span>грн</span></div>
+                </div>
+                <div class="price bonus">
+                    <div>ціна за купоном</div>
+                    <div><span>${item["price-bonus"]}</span><span>грн</span></div>
+                </div>
+        `
+        document.getElementById('items').appendChild(itemsDiv)
+    }) 
+}
+
+builItems()
+
+    
+
