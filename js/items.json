@@ -31,7 +31,7 @@
         "price-bonus":"3195"
     },
     {
-        "id":"2",
+        "id":"4",
         "title":"Акумуляторний обприскувач 12N",
         "img":"4.png",
         "parts-pay1":"6",
@@ -39,5 +39,25 @@
         "price1":"2190",
         "price2":"1698",
         "price-bonus":"1596"
+    },
+    {
+        "id":"5",
+        "title":"Зрошувач садовий Dnipro-M E8 мультифункціональний",
+        "img":"5.png",
+        "parts-pay1":"2",
+        "parts-pay2":"1",
+        "price1":"279",
+        "price2":"180",
+        "price-bonus":"167"
+    },
+    {
+        "id":"6",
+        "title":"Олія Dnipro-M для ланцюга 1 л",
+        "img":"6.png",
+        "parts-pay1":"1",
+        "parts-pay2":"1",
+        "price1":"198",
+        "price2":"150",
+        "price-bonus":"139"
     }
 ]
