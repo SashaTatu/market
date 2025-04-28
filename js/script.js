@@ -27,7 +27,7 @@ async function builItems() {
         let itemsDiv = document.createElement('div')
         itemsDiv.classList.add('item')
         itemsDiv.innerHTML += `
-                <div class="item-title">${item.title}</div>
+                <p class="item-title">${item.title}</p>
                 <div class="item-image">
                     <img src="img/${item.img}" alt="${items.title}">
                 </div>
